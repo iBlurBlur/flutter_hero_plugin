@@ -1,44 +1,23 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hero_plugin/flutter_hero_plugin.dart';
+import 'package:flutter_hero_plugin_example/profile_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-          actions: [
-            _buildPlatformVersion(),
-          ],
-        ),
-        body: Center(
-          child: Text('Flutter plugins'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: ProfilePage(),
     );
   }
-
-  FutureBuilder _buildPlatformVersion() => FutureBuilder<String?>(
-        future: FlutterHeroPlugin.platformVersion,
-        builder: (context, snapshot) {
-          return Visibility(
-            visible: snapshot.hasData,
-            child: Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(right: 12),
-              child: Text(snapshot.data ?? ''),
-            ),
-          );
-        },
-      );
 }
+
