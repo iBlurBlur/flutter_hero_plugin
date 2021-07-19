@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_hero_plugin (0.0.1):
+    - Flutter
+    - Kingfisher (~> 6.0)
+  - Kingfisher (6.3.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_hero_plugin (from `.symlinks/plugins/flutter_hero_plugin/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_hero_plugin:
+    :path: ".symlinks/plugins/flutter_hero_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_hero_plugin: dfdf339ed5ae497fd517a82315e428212702ef5e
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
